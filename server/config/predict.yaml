@@ -1,0 +1,63 @@
+tags:
+  - name: Text Detection
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /predict/lstm:
+    post:
+      tags:
+        - Text Detection
+      summary: Detect if text is AI generated
+      description: Endpoint to predict whether text is AI generated or human written
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "The body should contain the text to be classified"
+          schema:
+            title: predict
+            type: object
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+                  description: Text to be classified
+                  example: "This is a sample text to be classified."
+          required: true
+responses:
+  "200":
+    description: Successful response
+    schema:
+      title: Valid Prediction Response
+      type: object
+      example:
+        Wine Quality: 4.939022628389594
+        responseCode: 0
+        responseDesc: SUCCESS
+  "400":
+    description: Bad request
+    schema:
+      title: Invalid data Key
+      type: object
+      example:
+        responseCode: 2
+        responseDesc: Invalid data Key
+  "401":
+    description: Bad request
+    schema:
+      title: Input is not an array of size 11
+      type: object
+      example:
+        responseCode: 3
+        responseDesc: "Input Reading Error: Input is Incomplete"
+
+  "405":
+    description: Method Not Allowed
+    schema:
+      title: Method Not Allowed
+      type: object
+      example:
+        responseCode: 1
+        responseDesc: Method Not Allowed
