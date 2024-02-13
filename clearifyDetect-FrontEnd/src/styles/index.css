@@ -1,0 +1,16 @@
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
+}
+
+body {
+  font-family: "Aleo";
+  background-color: rgb(255, 255, 255);
+}

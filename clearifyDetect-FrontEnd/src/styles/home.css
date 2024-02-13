@@ -1,0 +1,60 @@
+/* Home page component styles */
+.home-container {
+  background-color: aliceblue;
+  width: 100%;
+  margin: auto;
+  padding-left: 70px;
+  padding-right: 25px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 4px solid #020887;
+}
+
+.homeBtn {
+  font-family: "El Messiri", sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  border: 2px ridge #020887;
+  margin-left: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.homeBtn:hover {
+  background-color: #020887;
+  color: #ffffff;
+  border: 2px ridge #020887;
+  cursor: pointer;
+}
+
+.homeTitle {
+  font-family: "El Messiri", sans-serif;
+  text-shadow: 2px 2px 9px #5cb2f0;
+  font-size: 45px;
+  margin: 10px 0;
+  color: #020887;
+}
+
+figure img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+.col {
+  flex-basis: 50%;
+  min-width: 300px;
+}
+
+.col img {
+  max-width: 100%;
+  padding-right: 70px;
+}
+
+.col p {
+  text-transform: capitalize;
+  text-align: justify;
+}
